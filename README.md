@@ -11,7 +11,7 @@ Folder - EndSem_output
 -Contains the output 
 
 Steps:
-$ make
-$ sudo insmod keyC.ko
-$ dmesg | tail -40
-$ sudo rmmod keyC.ko
+$ make <br>
+$ sudo insmod keyC.ko <br>
+$ dmesg | tail -40 <br>
+$ sudo rmmod keyC.ko <br>
