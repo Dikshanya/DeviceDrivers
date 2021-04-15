@@ -1,0 +1,39 @@
+What is a Daemon?
+A daemon is a computer program that runs as a background process, rather than being under the direct control of an interactive user.
+Programs are to be run with continuous user input and disconnected from the terminal
+
+Identifying process running
+command: ps or ps -f
+
+Various Daemons running in my system
+
+1.inetd:
+a daemon that starts other daemons that are needed. Initially all daemons started at boot time and ran continously. It is a superdaemon
+
+2.init: (primordial process,system)
+The first process to run after the system boots. It always has pid:1 and is an ancestor of all user processes.init defines several “run levels” that determine what set of system resources should
+be enabled
+
+3.getty:
+Unix does not communicate with users.Some sort of program is needed to act as a go-between. A terminal has no connection to the kernel and is useless until some program opens the terminal device file, sets the baud rate and other communication parameters, then looks for some character typed on the keyboard. The program that does this is getty.(get tty where tty is the abbreviation of teletypewriter, the original Unix console). getty is not as used as it used to be during the initial stages of its creation
+
+4.cron:
+cron is responsible for running commands ar preset times.It is frequently employed for administrative purposes, including management of log files and daily cleanup of the filesystem.
+
+5.inetd:
+daemon that manages other daemons. It starts up their client daemons when there is work for them to do and allow the clients to die gracefully once their tasks have been completed
+
+6.httpd:
+httpd is the Apache HyperText Transfer Protocol (HTTP) server program. It is designed to be run as a standalone daemon process. When used like this it will create a pool of child processes or threads to handle requests.
+
+7.tcpd:
+A useful tool for managing host-specific access is tcpd, often called the daemon “wrapper.” For TCP services you want to monitor or protect, it is invoked instead of the server program. tcpd checks if the remote host is allowed to use that service, and only if this succeeds will it execute the real server program
+
+8.amd:
+Amd is a daemon that automatically mounts filesystems whenever a file or directory within that filesystem is accessed. Filesystems are automatically unmounted when they appear to have become quiescent. 
+
+9.apmd:
+apmd is an APM monitoring daemon, and works in conjunction with the APM BIOS driver in the OS kernel. It can execute a command (normally a shell script) when certain events are reported by the driver, and will log, via syslogd(8), certain changes in system power status.
+
+10.telnetd:
+Purpose is to provide the server function for the TELNET protocol.telnetd daemon is a server that supports the Defense Advanced Research Product Agency (DARPA) standard Telnet Protocol (TELNET).
